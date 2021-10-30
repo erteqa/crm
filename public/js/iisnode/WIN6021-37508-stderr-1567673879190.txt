@@ -1,0 +1,12 @@
+Application has thrown an uncaught exception and is terminated:
+ReferenceError: window is not defined
+    at Module../resources/js/bootstrap.js (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:44170:1)
+    at __webpack_require__ (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:20:30)
+    at Object../resources/js/app.js (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:44106:1)
+    at __webpack_require__ (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:20:30)
+    at Object.0 (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:44239:1)
+    at __webpack_require__ (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:20:30)
+    at h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:84:18
+    at Object.<anonymous> (h:\root\home\eritqaaacademy-001\www\crm\crmv3\crmlaraveltest\public\js\app.js:87:10)
+    at Module._compile (module.js:643:30)
+    at Object.Module._extensions..js (module.js:654:10)

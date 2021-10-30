@@ -1,0 +1,4 @@
+[2020-04-17 12:49:38] local.ERROR: Trait 'Illuminate\Database\Eloquent\softDeletes' not found {"userId":1,"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Trait 'Illuminate\\Database\\Eloquent\\softDeletes' not found at /home/eritqaaa/public_html/crmold.eritqaa.com.tr/app/Model/Invoice.php:9)
+[stacktrace]
+#0 {main}
+"} 

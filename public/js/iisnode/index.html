@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"WIN6021-1072-stderr-1567635709297.txt","computername":"WIN6021","pid":1072,"type":"stderr","created":1567635709297},{"file":"WIN6021-13572-stderr-1567673018801.txt","computername":"WIN6021","pid":13572,"type":"stderr","created":1567673018801},{"file":"WIN6021-20636-stderr-1567673176132.txt","computername":"WIN6021","pid":20636,"type":"stderr","created":1567673176132},{"file":"WIN6021-21452-stderr-1567635485392.txt","computername":"WIN6021","pid":21452,"type":"stderr","created":1567635485392},{"file":"WIN6021-2180-stderr-1567635830120.txt","computername":"WIN6021","pid":2180,"type":"stderr","created":1567635830120},{"file":"WIN6021-22740-stderr-1567635391079.txt","computername":"WIN6021","pid":22740,"type":"stderr","created":1567635391079},{"file":"WIN6021-22764-stderr-1567673761256.txt","computername":"WIN6021","pid":22764,"type":"stderr","created":1567673761256},{"file":"WIN6021-23980-stderr-1567673009067.txt","computername":"WIN6021","pid":23980,"type":"stderr","created":1567673009067},{"file":"WIN6021-24292-stderr-1567672921442.txt","computername":"WIN6021","pid":24292,"type":"stderr","created":1567672921442},{"file":"WIN6021-28656-stderr-1567666797019.txt","computername":"WIN6021","pid":28656,"type":"stderr","created":1567666797019},{"file":"WIN6021-29012-stderr-1567673442941.txt","computername":"WIN6021","pid":29012,"type":"stderr","created":1567673442941},{"file":"WIN6021-29576-stderr-1567668010483.txt","computername":"WIN6021","pid":29576,"type":"stderr","created":1567668010483},{"file":"WIN6021-32744-stderr-1567635427939.txt","computername":"WIN6021","pid":32744,"type":"stderr","created":1567635427939},{"file":"WIN6021-35084-stderr-1567635471844.txt","computername":"WIN6021","pid":35084,"type":"stderr","created":1567635471844},{"file":"WIN6021-36520-stderr-1567674016693.txt","computername":"WIN6021","pid":36520,"type":"stderr","created":1567674016693},{"file":"WIN6021-36980-stderr-1567666035940.txt","computername":"WIN6021","pid":36980,"type":"stderr","created":1567666035940},{"file":"WIN6021-37508-stderr-1567673879190.txt","computername":"WIN6021","pid":37508,"type":"stderr","created":1567673879190},{"file":"WIN6021-37688-stderr-1567668010405.txt","computername":"WIN6021","pid":37688,"type":"stderr","created":1567668010405},{"file":"WIN6021-4848-stderr-1567644206083.txt","computername":"WIN6021","pid":4848,"type":"stderr","created":1567644206083},{"file":"WIN6021-5196-stderr-1567635776432.txt","computername":"WIN6021","pid":5196,"type":"stderr","created":1567635776432},{"file":"WIN6021-7172-stderr-1567635460454.txt","computername":"WIN6021","pid":7172,"type":"stderr","created":1567635460454}];
+        var lastUpdated = 1567674016959;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
