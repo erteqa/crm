@@ -1,6 +1,5 @@
 
 @extends("layouts.Admin_app")
-
 @section('content')
     <style>
         .st-paid, .st-due, .st-partial, .st-canceled,.st-rejected,.st-pending,.st-accepted,.st-Recurring,.st-Stopped
