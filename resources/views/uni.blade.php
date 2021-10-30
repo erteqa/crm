@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0115)https://www.templatemonster.com/blog/demos/responsive-css3-horizontal-application-style-form-fields/demo/index.html -->
 <html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <meta http-equiv="Content-Type" content="text/html">
     <title>Horizontal Application Form - Template Monster Demo</title>
     <meta name="author" content="Jake Rocheleau">
