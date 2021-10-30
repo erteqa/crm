@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Academy;
-
 use App\Model\Course;
 use App\User;
 use Illuminate\Http\Request;
@@ -48,9 +47,7 @@ class Course_cont extends Controller
     }
     public function delete(Request $request, $id)
     {
-
             $Course = Course::find($id);
-
       //  $permissions = Permission::where('name', 'like', $Course->title)->get();
 
         $permissions = Permission::where('name', 'like',$Course->title)->get();
