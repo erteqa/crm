@@ -1,0 +1,12 @@
+[2021-10-30 17:56:03] production.ERROR: Uncaught ReflectionException: Class App\Http\Middleware\RedirectIfNotAdmin does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\Http\\Middle...', 'handle')
+#1 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught ReflectionException: Class App\\Http\\Middleware\\RedirectIfNotAdmin does not exist in Command line code:1
+Stack trace:
+#0 Command line code(1): ReflectionMethod->__construct('App\\\\Http\\\\Middle...', 'handle')
+#1 {main}
+  thrown at Command line code:1)
+[stacktrace]
+#0 {main}
+"} 
